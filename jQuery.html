@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="JQuery.css">
+    <link rel="stylesheet" href="JQuery.css">
+    <title>JQuery Functions practice</title>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#dotClick button").click(function(){
+                    $("#dotClick h1").css ("color", "red");
+                })
+                $("#HideShow #hide").click(function(){
+                    $("#HideShow p").hide ();
+                })
+                $("#HideShow #show").click(function(){
+                    $("#HideShow p").show ();
+                })
+                $("#toggle button").click(function(){
+                    $("#toggle p").toggle (1000);
+                })
+                $("#flip-down").click(function(){
+                    $("#flip").slideDown ("slow");
+                })
+                $("#slide_up").click(function(){
+                    $("#flip").slideUp ("slow");
+                })
+                $("#slide_toggle").click(function(){
+                    $("#flip").slideToggle ("slow");
+                })
+                $("#fade_in button").click(function(){
+                        $("#red").fadeIn();
+                        $("#green").fadeIn("slow");
+                        $("#blue").fadeIn(3000);
+                })
+                $("#fade_out").click(function(){
+                    $("#orange").fadeOut ();
+                    $("#purple").fadeOut ("slow");
+                    $("#pink").fadeOut (3000);
+                })
+                $("#add_class").click(function(){
+                    $("h1, h2, p").addClass("blue");
+                    $("div").addClass("important");
+                })
+                $("#remove_class").click(function(){
+                    $("h1, h2, p").removeClass("blue");
+                    $("div").removeClass("important");
+                })
+                $("#before").click(function(){
+                    $("#pig").before("<b>Before</b>");
+                })
+                $("#after").click(function(){
+                    $("#pig").after("<b>After</b>");
+                })
+                $("#append_function").click(function(){
+                    $("#append_function p").append ("This is a really cool Cupcake-generated dummy text");
+                })
+                $("#pop_up").click(function(){
+                    alert($("#html_message").html());
+                });
+                $("#attr_func button").click(function(){
+                    $("#piggy").attr ("width",function(n, v){
+                    return v - 100;
+                    });
+                })
+                $("#val_button").click(function(){
+                    $("input:text").val("Art Vandelay");
+                })
+                $("#text_button").click(function(){
+                    $("#dotClick h1").text ("color", "red");
+                })
+                $("#attach_data").click(function(){
+                    $("div").data("Hello World");
+                });
+                $("#get_data").click(function(){
+                    alert($("div").data("Just hi"));
+                });
+
+            })
+        </script>
+</head>
+<body>
+    <div id=dotClick>       
+        <h1>Change my color!</h1> 
+        <button>Click me to change color</button>                 
+        <p>How to change the color once the button is clicked</p>
+    </div> 
+    <div id=HideShow>       
+        <h1>Hide and Show!</h1> 
+        <p>How to hide the element once the button is clicked</p> 
+        <button id="hide">Hide the paragraphs</button>  
+        <button id="show">Show the paragraphs</button>               
+    </div>
+    <div id=toggle>       
+        <h1>Toggle</h1>
+        <p>The toggle() method toggles between hide() and show() for the selected elements.</p>
+        <p>This method checks the selected elements for visibility. show() is run if an element is hidden. hide() is run if an element is visible - This creates a toggle effect.</p>
+        <p>Speed: Optional. Specifies the speed of the hide/show effect</p>
+        <p>Easing: Optional. Specifies the speed of the element in different points of the animation. Default value is "swing"</p>
+        <p>Callback: Optional. A function to be executed after the toggle() method is completed</p>
+        <button id=toggle>Toggle between hide and show for the info</button>  
+    </div>    
+                            
+    <div id=flip-down>
+        <h1>Sliding Down</h1>
+        <h3 class=flip>Click me to slide down</h3>
+        <h3 Class=panel>Hello world!</h3>
+    </div>
+
+    <div id=flip-up>
+            <h1>Sliding Up</h1>
+            <h3 class=flip>Click me to slide up</h3>
+            <h3 class=panel>Hello world!</h3>
+    </div> 
+
+    <div id=flip-toggle>
+        <h1>Sliding Toggle</h1>
+        <h3 class=flip>Click me to slide up</h3>
+        <h3 class=panel>Hello world!</h3>
+    </div> 
+    <div id=fade_in>       
+        <button>Click here to fade in elements</button>                 
+        <h1>How to fade in elements</h1> 
+        <div id="red">RED</div>
+        <div id="green">GREEN</div>
+        <div id="blue">BLUE</div>
+    </div>
+    <div id=fade_out>       
+        <button>Click here to fade out elements</button>                 
+        <h1>How to fade out elements</h1> 
+        <div id="orange">ORANGE</div>
+        <div id="purple">PURPLE</div>
+        <div id="pink">PINK</div>
+    </div>
+    <div id=append_function> 
+        <h1>This adds text to a paragraph</h1>      
+        <button>Click here to add text</button>                 
+        <p>I love candy canes jelly gingerbread cupcake. Candy bear claw powder pastry caramels jujubes chupa chups halvah. Bonbon I love candy. Candy I love I love danish oat cake halvah liquorice.</p>
+        <br>
+    </div>
+
+    <div id=before-and-after>
+        <h1>Insert text (or something else) before or after a given element</h1>
+        <img id="pig" src="Cute-piglet.PNG" alt="Piglet">
+        <br>
+        <button id="before">Before</button>
+        <button id="after">After</button>
+    </div>
+
+    <div id="add_class">
+        <h1>How to add a class</h1>
+        <h2>To several elements at once</h2>
+        <p>Cotton candy I love tart gummi bears fruitcake. Marshmallow jelly-o apple pie sweet jujubes I love I love. Soufflé tootsie roll I love powder tiramisu pastry marzipan cupcake.</p>
+        <p>Lollipop ice cream soufflé chocolate bar lemon drops carrot cake. Jujubes jelly beans cotton candy I love candy canes. Gummies I love jelly carrot cake chocolate cake toffee pastry. Tart wafer powder caramels.</p>
+        <div>This is some important text!</div><br>
+        <button id="adds">Adds classes to elements</button>
+    </div>
+    <div id="remove_class">
+            <h1 class="blue">How to add a class</h1>
+            <h2 class="blue">To several elements at once</h2>
+            <p class="blue">Cotton candy I love tart gummi bears fruitcake. Marshmallow jelly-o apple pie sweet jujubes I love I love. Soufflé tootsie roll I love powder tiramisu pastry marzipan cupcake.</p>
+            <p class="blue">Lollipop ice cream soufflé chocolate bar lemon drops carrot cake. Jujubes jelly beans cotton candy I love candy canes. Gummies I love jelly carrot cake chocolate cake toffee pastry. Tart wafer powder caramels.</p>
+            <div class="important">This is some important text!</div><br>
+            <button id="removes">Removes classes to elements</button>
+    </div>
+    <div id="html_pop_up">
+        <h1>HTML pop up</h1>
+        <button id="pop_up">Return the content of the p element, as a pop-up.</button>
+        <p id="html_message">This is a paragraph.</p>
+    </div>
+
+    <div id="attr_func">
+        <h1>Changing an attribute</h1>
+        <img id="piggy" src="Cute-piglet-2.png" alt="What a cute little piggy!">
+        <button>Make the image 100px smaller</button>
+    </div>
+
+    <div id="val_func">
+        <h1>The Val function</h1>
+        <p>To add specific information for a given field</p>
+        <p>Name: <input type="text" name="user"></p>
+        <button id="val_button">Set the value of the input field</button>
+    </div>
+
+    <div id="text_func">
+        <h1>The Text function</h1>
+        <button id="text_button">Set text content of the p elements</button>
+        <p>Using a function to set the text content of the selected elements.</p>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+    </div>
+
+    <div id="data_func">
+        <h1>The Data function</h1>
+        <button id="text_button">Set text content of the p elements</button>
+        <p>The data() method attaches data to, or gets data from, selected elements.</p>
+        <button id="attach_data">Attach data to div element</button><br>
+        <button id="get_data">Get data attached to div element</button>
+    </div>
+
+ 
+                       
+</body>
+</html>

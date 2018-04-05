@@ -1,0 +1,51 @@
+.flip{
+    padding: 5px;
+    text-align: center;
+    background-color: gray;
+    border: solid 1px black;
+}
+#panel{
+    padding: 50px;
+    display: none;  
+}
+#red{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+#green{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+#blue{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+#orange{
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+}
+#purple{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
+#pink{
+    width: 100px;
+    height: 100px;
+    background-color: fuchsia;
+}
+.blue{
+    color: blue;
+}
+.important{
+    font-size:16px;
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif
+}
+#piggy{
+    width:600 px;
+}
