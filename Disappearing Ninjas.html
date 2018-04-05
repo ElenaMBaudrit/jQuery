@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Practice" content="JQuery practice: first step becoming a real Ninja">
+    <link rel="stylesheet" href="Disappearing Ninjas.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disappearing Ninja</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#1").click(function(){
+        $("#1").hide ();
+    })
+    $("#2").click(function(){
+        $("#2").hide ();
+    })
+    $("#3").click(function(){
+        $("#3").hide ();
+    })
+    $("#4").click(function(){
+        $("#4").hide ();
+    })
+    $("#5").click(function(){
+        $("#5").hide ();
+    })
+    $("#6").click(function(){
+        $("#6").hide ();
+    })
+    $("#7").click(function(){
+        $("#7").hide ();
+    })
+    $("#8").click(function(){
+        $("#8").hide ();
+    })
+   
+});
+    $("#images", "#show").click(function(){
+        $(".disappear").show ();
+    })
+</script>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 id="ninja_title">The Great Disappearing Ninjas</h1>
+        <p id="ninja_instructions"> Instructions: Click on each Ninja to make them disappear.</p>
+            <div id="images">
+                <img id="1" class="disappear" src="cute_ninja.png" alt="Cutest Ninja Ever">
+                <img id="2" class="disappear" src="cute_ninja_1.png" alt="Cutest Ninja Ever">
+                <img id="3" class="disappear" src="cute_ninja_2.png" alt="Cutest Ninja Ever">
+                <img id="4" class="disappear" src="cute_ninja_3.png" alt="Cutest Ninja Ever">
+                <img id="5" class="disappear" src="cute_ninja_3.png" alt="Cutest Ninja Ever">
+                <img id="6" class="disappear" src="cute_ninja_2.png" alt="Cutest Ninja Ever">
+                <img id="7" class="disappear" src="cute_ninja_1.png" alt="Cutest Ninja Ever">
+                <img id="8" class="disappear" src="cute_ninja.png" alt="Cutest Ninja Ever">
+                <br>
+                <button id="show">Restore</button>
+            </div>
+    </div>
+
+</body>
+</html>

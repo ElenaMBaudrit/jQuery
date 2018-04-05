@@ -1,0 +1,24 @@
+
+
+#wrapper{
+    width: 970px;
+    background-color:lightgreen;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+#ninja_title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: teal;
+}
+#ninja_instructions{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.disappear{
+    width: 200px;
+    height:200px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
